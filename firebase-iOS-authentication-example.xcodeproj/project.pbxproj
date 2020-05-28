@@ -13,6 +13,14 @@
 		803FEF68247F24DD00A4E62A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803FEF66247F24DD00A4E62A /* Main.storyboard */; };
 		803FEF6A247F24E400A4E62A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 803FEF69247F24E400A4E62A /* Assets.xcassets */; };
 		803FEF6D247F24E400A4E62A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803FEF6B247F24E400A4E62A /* LaunchScreen.storyboard */; };
+		803FEF7B247F76E700A4E62A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF7A247F76E700A4E62A /* CreateAccountViewController.swift */; };
+		803FEF7D247F774600A4E62A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF7C247F774600A4E62A /* LoginViewController.swift */; };
+		803FEF7F247F776600A4E62A /* FindAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF7E247F776600A4E62A /* FindAccountViewController.swift */; };
+		803FEF81247F779000A4E62A /* RestorePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF80247F779000A4E62A /* RestorePasswordViewController.swift */; };
+		803FEF85247F783600A4E62A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF84247F783600A4E62A /* LandingViewController.swift */; };
+		803FEF88247F7D9500A4E62A /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF87247F7D9500A4E62A /* AccountPresenter.swift */; };
+		803FEF8A247F7F4800A4E62A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF89247F7F4800A4E62A /* Account.swift */; };
+		803FEF8C247F81DE00A4E62A /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF8B247F81DE00A4E62A /* AccountService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		803FEF69247F24E400A4E62A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		803FEF6C247F24E400A4E62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		803FEF6E247F24E400A4E62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		803FEF7A247F76E700A4E62A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		803FEF7C247F774600A4E62A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		803FEF7E247F776600A4E62A /* FindAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAccountViewController.swift; sourceTree = "<group>"; };
+		803FEF80247F779000A4E62A /* RestorePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordViewController.swift; sourceTree = "<group>"; };
+		803FEF84247F783600A4E62A /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		803FEF87247F7D9500A4E62A /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		803FEF89247F7F4800A4E62A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		803FEF8B247F81DE00A4E62A /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,7 @@
 				803FEF78247F272100A4E62A /* Model */,
 				803FEF79247F272A00A4E62A /* View */,
 				803FEF77247F271800A4E62A /* Presenter */,
+				803FEF86247F7D2E00A4E62A /* ServiceData */,
 				803FEF75247F26B800A4E62A /* Storyboard */,
 				803FEF76247F26D600A4E62A /* Resources */,
 				803FEF6E247F24E400A4E62A /* Info.plist */,
@@ -88,6 +105,7 @@
 		803FEF77247F271800A4E62A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				803FEF87247F7D9500A4E62A /* AccountPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -95,6 +113,7 @@
 		803FEF78247F272100A4E62A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				803FEF89247F7F4800A4E62A /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,8 +122,21 @@
 			isa = PBXGroup;
 			children = (
 				803FEF64247F24DD00A4E62A /* ViewController.swift */,
+				803FEF7A247F76E700A4E62A /* CreateAccountViewController.swift */,
+				803FEF7C247F774600A4E62A /* LoginViewController.swift */,
+				803FEF7E247F776600A4E62A /* FindAccountViewController.swift */,
+				803FEF80247F779000A4E62A /* RestorePasswordViewController.swift */,
+				803FEF84247F783600A4E62A /* LandingViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		803FEF86247F7D2E00A4E62A /* ServiceData */ = {
+			isa = PBXGroup;
+			children = (
+				803FEF8B247F81DE00A4E62A /* AccountService.swift */,
+			);
+			path = ServiceData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +231,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803FEF7B247F76E700A4E62A /* CreateAccountViewController.swift in Sources */,
 				803FEF65247F24DD00A4E62A /* ViewController.swift in Sources */,
+				803FEF85247F783600A4E62A /* LandingViewController.swift in Sources */,
 				803FEF61247F24DD00A4E62A /* AppDelegate.swift in Sources */,
+				803FEF88247F7D9500A4E62A /* AccountPresenter.swift in Sources */,
+				803FEF8A247F7F4800A4E62A /* Account.swift in Sources */,
+				803FEF7F247F776600A4E62A /* FindAccountViewController.swift in Sources */,
+				803FEF81247F779000A4E62A /* RestorePasswordViewController.swift in Sources */,
+				803FEF8C247F81DE00A4E62A /* AccountService.swift in Sources */,
+				803FEF7D247F774600A4E62A /* LoginViewController.swift in Sources */,
 				803FEF63247F24DD00A4E62A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
