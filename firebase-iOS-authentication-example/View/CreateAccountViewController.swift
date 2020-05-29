@@ -11,6 +11,7 @@ import UIKit
 class CreateAccountViewController: UIViewController {
   // MARK: - IBOutlets
   
+  @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet var emailTextField: UITextField!
   @IBOutlet var passwordTextField: UITextField!
   @IBOutlet var viewProgress: UIActivityIndicatorView!
@@ -29,9 +30,10 @@ class CreateAccountViewController: UIViewController {
   }
   
   @IBAction func registerAccount(_ sender: Any) {
+    guard let name = nameTextField.text else { return }
     guard let email = emailTextField.text else { return }
     guard let password = passwordTextField.text else { return }
-    let newAccount: Account = Account(name: "USER_TEST", email: email, password: password, state: .new)
+    let newAccount: Account = Account(name: name, email: email, password: password, state: .new)
     presenter.register(withAccount: newAccount)
   }
 }
@@ -50,8 +52,10 @@ extension CreateAccountViewController: AccountDelegate {
   func registerSuccess(withUser user: User) {
     self.user = user
     let storyboard: UIStoryboard = UIStoryboard(name: presenter.storyboardName, bundle: Bundle.main)
-    guard let identifier: String = LandingViewController().restorationIdentifier else { return }
-    let nextViewController: LandingViewController = storyboard.instantiateViewController(identifier: identifier)
+    let controller: TabBarViewController = TabBarViewController()
+    let nextViewController: TabBarViewController = storyboard.instantiateViewController(identifier: controller.identifier)
+    nextViewController.modalPresentationStyle = .overFullScreen
+    nextViewController.modalTransitionStyle = .crossDissolve
     self.present(nextViewController, animated: true, completion: nil)
   }
   

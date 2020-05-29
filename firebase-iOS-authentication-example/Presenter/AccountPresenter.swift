@@ -20,7 +20,7 @@ class AccountPresenter {
   private let accountService: AccountService
   weak private var accountDelegate: AccountDelegate?
   var storyboardName: String {
-    return "Main"
+    return "Landing"
   }
   
   init(accountService: AccountService) {
