@@ -15,12 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firebase-icon" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-vC-UYE">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-built_knockout" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-P1-5u7">
+                                <rect key="frame" x="32" y="519" width="311" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0HX-XV-O3z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FiOSAE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb7-cJ-dAO">
+                                <rect key="frame" x="24" y="272" width="327" height="123"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="90"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firebase-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-gp-Mg7">
+                                <rect key="frame" x="32" y="20" width="311" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="f5t-Eq-IM6"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9793034196" green="0.80986350770000004" blue="0.4406391382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kOg-gp-Mg7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1eR-jc-lyv"/>
+                            <constraint firstItem="Vb7-cJ-dAO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2gM-gq-ZHC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kOg-gp-Mg7" secondAttribute="trailing" constant="32" id="Mv6-ep-LVe"/>
+                            <constraint firstItem="Vb7-cJ-dAO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZVF-KU-mjk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVB-P1-5u7" secondAttribute="trailing" constant="32" id="bfK-yM-cOc"/>
+                            <constraint firstItem="MVB-P1-5u7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="fWv-6n-4Qb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MVB-P1-5u7" secondAttribute="bottom" constant="20" id="o4F-w0-hyE"/>
+                            <constraint firstItem="kOg-gp-Mg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="wUQ-ma-qIY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -31,5 +55,6 @@
     </scenes>
     <resources>
         <image name="firebase-icon" width="612" height="792"/>
+        <image name="logo-built_knockout" width="612" height="792"/>
     </resources>
 </document>

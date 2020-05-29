@@ -22,6 +22,7 @@
 		803FEF88247F7D9500A4E62A /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF87247F7D9500A4E62A /* AccountPresenter.swift */; };
 		803FEF8A247F7F4800A4E62A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF89247F7F4800A4E62A /* Account.swift */; };
 		803FEF8C247F81DE00A4E62A /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FEF8B247F81DE00A4E62A /* AccountService.swift */; };
+		80B17E5D24808989002F06BF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B17E5C24808989002F06BF /* RoundButton.swift */; };
 		80E22C68247F844B00595C42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80E22C67247F844A00595C42 /* GoogleService-Info.plist */; };
 		80E22C6A247F900900595C42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E22C69247F900900595C42 /* User.swift */; };
 		80E22C6C247FA3C500595C42 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E22C6B247FA3C500595C42 /* Landing.storyboard */; };
@@ -47,6 +48,7 @@
 		803FEF87247F7D9500A4E62A /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		803FEF89247F7F4800A4E62A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		803FEF8B247F81DE00A4E62A /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		80B17E5C24808989002F06BF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		80E22C67247F844A00595C42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80E22C69247F900900595C42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80E22C6B247FA3C500595C42 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				803FEF86247F7D2E00A4E62A /* ServiceData */,
 				803FEF75247F26B800A4E62A /* Storyboard */,
 				803FEF76247F26D600A4E62A /* Resources */,
+				80B17E5B2480894E002F06BF /* Helper */,
 				803FEF6E247F24E400A4E62A /* Info.plist */,
 				80E22C67247F844A00595C42 /* GoogleService-Info.plist */,
 			);
@@ -153,6 +156,14 @@
 				803FEF8B247F81DE00A4E62A /* AccountService.swift */,
 			);
 			path = ServiceData;
+			sourceTree = "<group>";
+		};
+		80B17E5B2480894E002F06BF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				80B17E5C24808989002F06BF /* RoundButton.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		88D03C706436791498713584 /* Pods */ = {
@@ -313,6 +324,7 @@
 				803FEF61247F24DD00A4E62A /* AppDelegate.swift in Sources */,
 				803FEF88247F7D9500A4E62A /* AccountPresenter.swift in Sources */,
 				803FEF8A247F7F4800A4E62A /* Account.swift in Sources */,
+				80B17E5D24808989002F06BF /* RoundButton.swift in Sources */,
 				803FEF7F247F776600A4E62A /* FindAccountViewController.swift in Sources */,
 				803FEF81247F779000A4E62A /* RestorePasswordViewController.swift in Sources */,
 				80E22C6A247F900900595C42 /* User.swift in Sources */,
