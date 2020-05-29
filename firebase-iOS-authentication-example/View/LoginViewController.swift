@@ -15,6 +15,10 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var viewProgress: UIActivityIndicatorView!
   private var presenter = LoginPresenter(loginService: LoginService())
   private var user: User?
+  public var identifier: String {
+    return "LoginViewController"
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

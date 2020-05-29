@@ -219,7 +219,7 @@
         <!--Login View Controller-->
         <scene sceneID="oJ2-Lo-X3h">
             <objects>
-                <viewController id="NPC-Cs-yFN" customClass="LoginViewController" customModule="FiOSAE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NPC-Cs-yFN" customClass="LoginViewController" customModule="FiOSAE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l0k-jH-dVb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="aCe-dc-JEB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xao-gs-SNf" customClass="RoundButton" customModule="FiOSAE" customModuleProvider="target">
                                 <rect key="frame" x="32" y="224" width="100" height="28"/>
@@ -417,6 +417,9 @@
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2p5-ss-0pF" kind="presentation" identifier="restorePassword" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="6n7-uY-EXs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -439,12 +442,12 @@
                         <viewLayoutGuide key="safeArea" id="lBD-T5-MAd"/>
                     </view>
                     <connections>
-                        <segue destination="2p5-ss-0pF" kind="presentation" identifier="restorepassword" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="1jq-zX-V1f"/>
+                        <outlet property="emailTextField" destination="13S-6q-kmL" id="36f-TA-KF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sq7-jy-NEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="485"/>
+            <point key="canvasLocation" x="2593" y="498"/>
         </scene>
         <!--Restore Password View Controller-->
         <scene sceneID="ZCO-WQ-U4r">
@@ -486,6 +489,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fBM-0k-xdc" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="M6u-li-php"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userEmailText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-oE-HvZ">
                                 <rect key="frame" x="16" y="148" width="343" height="28"/>
@@ -511,7 +517,27 @@
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendEmail" destination="2p5-ss-0pF" eventType="touchUpInside" id="Kxp-vm-ZzO"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="* This action redirects to a web page where you can change your password" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T7-Nm-TNK">
+                                <rect key="frame" x="32" y="236" width="311" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Inx-yp-qyN"/>
+                                </constraints>
+                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-op-dkU">
+                                <rect key="frame" x="16" y="328" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kad-8N-yaX"/>
+                                </constraints>
+                                <color key="color" red="0.9793034196" green="0.80986350770000004" blue="0.4406391382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -519,10 +545,16 @@
                             <constraint firstItem="pFx-oE-HvZ" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="16" id="AKF-VN-lol"/>
                             <constraint firstItem="Gu1-Ql-7XU" firstAttribute="top" secondItem="ohJ-F1-lWE" secondAttribute="top" constant="16" id="EhH-q6-Oox"/>
                             <constraint firstItem="tR3-Pc-6On" firstAttribute="top" secondItem="pFx-oE-HvZ" secondAttribute="bottom" constant="16" id="ILF-FN-fI7"/>
+                            <constraint firstItem="dzM-op-dkU" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="16" id="OTv-61-C6w"/>
+                            <constraint firstItem="ohJ-F1-lWE" firstAttribute="trailing" secondItem="dzM-op-dkU" secondAttribute="trailing" constant="16" id="Oyq-bB-hSX"/>
+                            <constraint firstItem="6T7-Nm-TNK" firstAttribute="top" secondItem="tR3-Pc-6On" secondAttribute="bottom" constant="16" id="Qla-He-LsI"/>
+                            <constraint firstItem="ohJ-F1-lWE" firstAttribute="trailing" secondItem="6T7-Nm-TNK" secondAttribute="trailing" constant="32" id="Sx1-i3-awN"/>
+                            <constraint firstItem="6T7-Nm-TNK" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="32" id="WMd-Le-Bhp"/>
                             <constraint firstItem="ohJ-F1-lWE" firstAttribute="trailing" secondItem="pFx-oE-HvZ" secondAttribute="trailing" constant="16" id="XH9-FM-XRW"/>
                             <constraint firstItem="tR3-Pc-6On" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="32" id="ZIc-3Z-FhT"/>
                             <constraint firstItem="RZz-zL-arV" firstAttribute="top" secondItem="ohJ-F1-lWE" secondAttribute="top" constant="30" id="ZdS-AR-y4r"/>
                             <constraint firstItem="ohJ-F1-lWE" firstAttribute="trailing" secondItem="gf5-aK-RxK" secondAttribute="trailing" constant="16" id="kzW-hm-73k"/>
+                            <constraint firstItem="dzM-op-dkU" firstAttribute="top" secondItem="6T7-Nm-TNK" secondAttribute="bottom" constant="32" id="pKv-fI-wwa"/>
                             <constraint firstItem="gf5-aK-RxK" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="16" id="rdq-VT-czT"/>
                             <constraint firstItem="gf5-aK-RxK" firstAttribute="top" secondItem="Gu1-Ql-7XU" secondAttribute="bottom" constant="16" id="s41-gU-PBP"/>
                             <constraint firstItem="RZz-zL-arV" firstAttribute="leading" secondItem="ohJ-F1-lWE" secondAttribute="leading" constant="16" id="sOk-rC-Bru"/>
@@ -532,10 +564,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ohJ-F1-lWE"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmailText" destination="pFx-oE-HvZ" id="Qhe-3g-vOD"/>
+                        <outlet property="viewProgress" destination="dzM-op-dkU" id="K2x-dZ-npG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bj0-TR-WDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3850" y="485"/>
+            <point key="canvasLocation" x="3472.8000000000002" y="497.90104947526243"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

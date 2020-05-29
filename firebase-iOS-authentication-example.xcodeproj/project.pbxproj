@@ -29,6 +29,8 @@
 		80FAC9FB2480AB460093AC43 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAC9FA2480AB460093AC43 /* TabBarViewController.swift */; };
 		80FAC9FD2480B1D70093AC43 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAC9FC2480B1D70093AC43 /* LoginPresenter.swift */; };
 		80FAC9FF2480B2320093AC43 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAC9FE2480B2320093AC43 /* LoginService.swift */; };
+		80FACA012480C6DB0093AC43 /* RestorePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FACA002480C6DB0093AC43 /* RestorePasswordPresenter.swift */; };
+		80FACA032480C6F20093AC43 /* RestorePasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FACA022480C6F20093AC43 /* RestorePasswordService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		80FAC9FA2480AB460093AC43 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		80FAC9FC2480B1D70093AC43 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		80FAC9FE2480B2320093AC43 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		80FACA002480C6DB0093AC43 /* RestorePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordPresenter.swift; sourceTree = "<group>"; };
+		80FACA022480C6F20093AC43 /* RestorePasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			children = (
 				803FEF87247F7D9500A4E62A /* AccountPresenter.swift */,
 				80FAC9FC2480B1D70093AC43 /* LoginPresenter.swift */,
+				80FACA002480C6DB0093AC43 /* RestorePasswordPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				803FEF8B247F81DE00A4E62A /* AccountService.swift */,
 				80FAC9FE2480B2320093AC43 /* LoginService.swift */,
+				80FACA022480C6F20093AC43 /* RestorePasswordService.swift */,
 			);
 			path = ServiceData;
 			sourceTree = "<group>";
@@ -334,11 +340,13 @@
 				803FEF85247F783600A4E62A /* LandingViewController.swift in Sources */,
 				803FEF61247F24DD00A4E62A /* AppDelegate.swift in Sources */,
 				803FEF88247F7D9500A4E62A /* AccountPresenter.swift in Sources */,
+				80FACA012480C6DB0093AC43 /* RestorePasswordPresenter.swift in Sources */,
 				803FEF8A247F7F4800A4E62A /* Account.swift in Sources */,
 				80B17E5D24808989002F06BF /* RoundButton.swift in Sources */,
 				803FEF7F247F776600A4E62A /* FindAccountViewController.swift in Sources */,
 				803FEF81247F779000A4E62A /* RestorePasswordViewController.swift in Sources */,
 				80E22C6A247F900900595C42 /* User.swift in Sources */,
+				80FACA032480C6F20093AC43 /* RestorePasswordService.swift in Sources */,
 				803FEF8C247F81DE00A4E62A /* AccountService.swift in Sources */,
 				803FEF7D247F774600A4E62A /* LoginViewController.swift in Sources */,
 				80FAC9FB2480AB460093AC43 /* TabBarViewController.swift in Sources */,
