@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oja-5J-J43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="-270"/>
+            <point key="canvasLocation" x="926" y="-285"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="oJ2-Lo-X3h">
@@ -234,11 +234,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmQ-xv-CdZ">
-                                <rect key="frame" x="16" y="30" width="56" height="28"/>
+                                <rect key="frame" x="16" y="30" width="126" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="K1X-dn-WaX"/>
                                 </constraints>
-                                <state key="normal" title="Cancel">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Create an account">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -347,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ef-PK-p7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="498"/>
+            <point key="canvasLocation" x="926" y="466"/>
         </scene>
         <!--Find Account View Controller-->
         <scene sceneID="Rsr-8c-Qa4">
@@ -380,12 +381,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdn-wn-BJv">
-                                <rect key="frame" x="16" y="30" width="56" height="28"/>
+                                <rect key="frame" x="16" y="30" width="49" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Cmy-Sa-cqH"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="TXd-b2-cIt"/>
                                 </constraints>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Log in">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -447,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sq7-jy-NEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593" y="498"/>
+            <point key="canvasLocation" x="1649" y="466"/>
         </scene>
         <!--Restore Password View Controller-->
         <scene sceneID="ZCO-WQ-U4r">
@@ -480,13 +481,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZz-zL-arV">
-                                <rect key="frame" x="16" y="30" width="100" height="28"/>
+                                <rect key="frame" x="16" y="30" width="107" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="Ktf-Qm-8mP"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VQp-wp-4VU"/>
                                     <constraint firstAttribute="height" constant="28" id="t7l-s6-slH"/>
                                 </constraints>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Find Account">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -571,13 +572,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bj0-TR-WDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3472.8000000000002" y="497.90104947526243"/>
+            <point key="canvasLocation" x="2380" y="466"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AGw-UY-rVh"/>
+        <segue reference="M6u-li-php"/>
         <segue reference="Ncf-pC-M5i"/>
-        <segue reference="fVs-F4-bgS"/>
+        <segue reference="VfF-HA-qaf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>

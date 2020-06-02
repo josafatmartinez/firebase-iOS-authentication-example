@@ -51,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wuw-Sh-paf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Users" image="person.3" catalog="system" id="f8H-Fc-mUJ"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="person.3" catalog="system" landscapeImage="person.3" selectedImage="person.3.fill" id="f8H-Fc-mUJ"/>
                     <navigationItem key="navigationItem" title="FiOSAE" id="RKo-gz-TYP">
                         <barButtonItem key="rightBarButtonItem" title="Sign out" id="iYE-VP-ZT3"/>
                     </navigationItem>
@@ -63,7 +63,7 @@
         <!--User Info-->
         <scene sceneID="cEe-Eg-wLd">
             <objects>
-                <viewController id="APq-71-u5Z" sceneMemberID="viewController">
+                <viewController id="APq-71-u5Z" customClass="UserInfoViewController" customModule="FiOSAE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ElX-Xg-MRw" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,56 +77,105 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfK-SC-VCV">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfK-SC-VCV">
                                 <rect key="frame" x="32" y="92" width="311" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="igq-fP-oVy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-Xv-avp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-Xv-avp">
                                 <rect key="frame" x="32" y="168" width="311" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bNL-0Z-zub"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-9A-UiW" customClass="RoundButton" customModule="FiOSAE" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-9A-UiW" customClass="RoundButton" customModule="FiOSAE" customModuleProvider="target">
                                 <rect key="frame" x="243" y="244" width="100" height="44"/>
                                 <color key="backgroundColor" red="0.9793034196" green="0.80986350770000004" blue="0.4406391382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Pzg-PD-fDx"/>
                                     <constraint firstAttribute="width" constant="100" id="aSJ-TK-X4g"/>
                                 </constraints>
-                                <state key="normal" title="Update">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Update" image="pencil" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateUserInformation" destination="APq-71-u5Z" eventType="touchUpInside" id="VU2-Ni-kCM"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-xW-wDv" customClass="RoundButton" customModule="FiOSAE" customModuleProvider="target">
+                                <rect key="frame" x="32" y="244" width="100" height="44"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Rw-hx-AGK"/>
+                                    <constraint firstAttribute="width" constant="100" id="DCQ-Ry-aaz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log Out" image="power" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logOutUser" destination="APq-71-u5Z" eventType="touchUpInside" id="dc6-5k-1rZ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fXM-RE-PiE">
+                                <rect key="frame" x="32" y="311.5" width="311" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IjH-jx-5Ah"/>
+                                </constraints>
+                                <color key="color" red="0.96073275800000002" green="0.80356842279999996" blue="0.49715512989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rfK-SC-VCV" firstAttribute="leading" secondItem="x7m-oR-Xse" secondAttribute="leading" constant="32" id="0kJ-TZ-gYW"/>
+                            <constraint firstItem="fXM-RE-PiE" firstAttribute="leading" secondItem="x7m-oR-Xse" secondAttribute="leading" constant="32" id="5VI-Vz-kXz"/>
                             <constraint firstItem="x7m-oR-Xse" firstAttribute="trailing" secondItem="rfK-SC-VCV" secondAttribute="trailing" constant="32" id="Ffa-CK-WJs"/>
                             <constraint firstItem="x7m-oR-Xse" firstAttribute="trailing" secondItem="ndG-Xv-avp" secondAttribute="trailing" constant="32" id="Gbw-Xw-19y"/>
                             <constraint firstItem="ndG-Xv-avp" firstAttribute="leading" secondItem="x7m-oR-Xse" secondAttribute="leading" constant="32" id="JjU-26-rO2"/>
                             <constraint firstItem="ieQ-n2-E4y" firstAttribute="leading" secondItem="x7m-oR-Xse" secondAttribute="leading" constant="16" id="OSR-tm-lkc"/>
                             <constraint firstItem="eVi-9A-UiW" firstAttribute="top" secondItem="ndG-Xv-avp" secondAttribute="bottom" constant="32" id="PPl-f6-wYd"/>
+                            <constraint firstItem="x7m-oR-Xse" firstAttribute="trailing" secondItem="fXM-RE-PiE" secondAttribute="trailing" constant="32" id="TKz-wV-Fqh"/>
                             <constraint firstItem="x7m-oR-Xse" firstAttribute="trailing" secondItem="eVi-9A-UiW" secondAttribute="trailing" constant="32" id="VsP-DD-ys8"/>
                             <constraint firstItem="ieQ-n2-E4y" firstAttribute="top" secondItem="x7m-oR-Xse" secondAttribute="top" constant="16" id="ZLh-Cx-d0U"/>
+                            <constraint firstItem="fXM-RE-PiE" firstAttribute="centerY" secondItem="ElX-Xg-MRw" secondAttribute="centerY" id="auE-is-Ir4"/>
+                            <constraint firstItem="fjE-xW-wDv" firstAttribute="leading" secondItem="x7m-oR-Xse" secondAttribute="leading" constant="32" id="cvN-4c-B92"/>
                             <constraint firstItem="x7m-oR-Xse" firstAttribute="trailing" secondItem="ieQ-n2-E4y" secondAttribute="trailing" constant="16" id="hr3-Wg-ZRa"/>
                             <constraint firstItem="ndG-Xv-avp" firstAttribute="top" secondItem="rfK-SC-VCV" secondAttribute="bottom" constant="32" id="jmR-kf-Qes"/>
+                            <constraint firstItem="fjE-xW-wDv" firstAttribute="top" secondItem="ndG-Xv-avp" secondAttribute="bottom" constant="32" id="lYN-kD-frH"/>
                             <constraint firstItem="rfK-SC-VCV" firstAttribute="top" secondItem="ieQ-n2-E4y" secondAttribute="bottom" constant="32" id="wmB-By-ew1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x7m-oR-Xse"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User Info" image="person" catalog="system" id="elE-al-4rg"/>
+                    <tabBarItem key="tabBarItem" title="User Info" image="person" catalog="system" landscapeImage="person" selectedImage="person.fill" id="elE-al-4rg"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ndG-Xv-avp" id="JGE-85-eyj"/>
+                        <outlet property="nameTextField" destination="rfK-SC-VCV" id="aGe-eu-5sB"/>
+                        <outlet property="viewProgress" destination="fXM-RE-PiE" id="lPl-Ia-Nlc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRQ-iz-2f8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +189,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pgz-Rz-i23">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="APq-71-u5Z" kind="relationship" relationship="viewControllers" id="zY2-i3-wHw"/>
@@ -153,7 +201,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="power" catalog="system" width="128" height="124"/>
     </resources>
 </document>
